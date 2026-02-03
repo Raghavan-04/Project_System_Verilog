@@ -1,0 +1,31 @@
+Phase,Name,Primary Goal,Key Tools
+Phase 1,Architecture & RTL,Design the logic in Verilog/SystemVerilog.,"VS Code, Icarus Verilog"
+Phase 2,Verification,Use high-speed simulation to find logic bugs.,"Verilator, GTKWave, C++"
+Phase 3,Integration,Stitch the CPU and all peripherals onto a Bus.,"FuseSoC, LiteX"
+Phase 4,FPGA Prototyping,"Test the ""code"" on real hardware gates.","Lattice ECP5, Yosys, nextpnr"
+Phase 5,Physical Design,Generate the GDSII file (silicon blueprint).,"OpenLane, SkyWater 130nm PDK"The 5 Stages of a CPU Core
+1. Instruction Fetch (IF)
+The CPU needs to know what to do next.
+Module: Program Counter (PC).
+What happens: The PC holds the memory address of the next instruction. It sends that address to the Instruction Memory, retrieves the 32-bit "code" (e.g., 0000000...), and then increments itself to point to the next line.
+2. Instruction Decode (ID)
+The CPU translates the 1s and 0s into "intent."
+Module: Decoder & Register File.
+What happens: The decoder looks at the "Opcode" (the first few bits) to see if this is an ADD, a SUB, or a JUMP. It also tells the Register File which internal "slots" (registers) hold the numbers you want to work with.
+3. Execute (EX)
+This is where the actual math happens.
+Module: ALU (Arithmetic Logic Unit).
+What happens: The ALU takes the two numbers from the registers and performs the operation (Addition, XOR, Shift, etc.). If you were building a Systolic Array, it would usually plug into this stage or act as a "Co-processor" here.
+4. Memory Access (MEM)
+Sometimes, the CPU needs to talk to the "outside" world (RAM).
+Module: Load/Store Unit.
+What happens: If the instruction is a "Load," the CPU reads data from a specific address in RAM. If it's a "Store," it writes the result of the calculation into RAM.
+5. Write Back (WB)
+Closing the loop.
+Module: Register File (Write Port).
+What happens: The final result (either from the ALU math or from the RAM load) is written back into one of the CPU's registers so it can be used by the next instruction.
+"Phase 1" To-Do List
+To get core running in a simulator, you should build these three sub-modules first:
+The ALU: Write a Verilog module that takes two 32-bit inputs and an "op" signal, then outputs the result.
+The Register File: Create an array of 32 registers (each 32 bits wide) with two read ports and one write port.
+The Control Logic: This is the "brain of the brain"—it's a large case statement that looks at the instruction and flips the switches for the ALU and Memory.
