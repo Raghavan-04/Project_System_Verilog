@@ -49,7 +49,7 @@ Execute the following from the root directory to compile and run the current sim
 
 ## 📈 Key Learnings
 
-<<<<<<< HEAD
+
 ### 1. Advanced RTL Architecture
 
 * **Pipelining:** I learned how to break complex math () into distinct stages using registers to increase the "speed limit" (clock frequency) of your chip.
@@ -119,12 +119,9 @@ Seeing "200" instead of "700" is actually most important challenge yet. It repre
 
 * **What it is:**  Testbench is likely "sampling" the output before it’s ready, or FIFO is reading too fast/slow.
 * **Why it's good:** Debugging this in **GTKWave** is exactly what RTL engineers do for 80% of their workday.
-
-=======
 * **Sequential vs. Combinational Logic**: Using `always_ff` for clocked memory and `always_comb` for immediate logic gates.
 * **Clock Management**: Implementing counters to divide high-frequency system clocks into usable timing intervals.
 * **Verification**: Writing C++ testbenches to "force-flush" waveform data to disk for analysis.
->>>>>>> 6970a10 (Update of SOC files)
 
 ---
 
