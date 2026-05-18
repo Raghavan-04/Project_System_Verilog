@@ -125,7 +125,7 @@ Seeing "200" instead of "700" is actually most important challenge yet. It repre
 
 ---
 
-## 🔭 Future Explorations
+##  Future Explorations
 
 * Implementing **Finite State Machines (FSM)** for breath cycle management (Inspiration vs. Expiration).
 * Building **Serial Interfaces** (SPI/I2C) to simulate reading from airway pressure sensors.
