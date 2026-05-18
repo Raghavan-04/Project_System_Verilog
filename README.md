@@ -28,7 +28,7 @@ The repository is organized to separate the hardware description from the simula
 
 ---
 
-## 🚀 Simulation Environment
+## Simulation Environment
 
 To ensure medical-grade reliability, this project uses a high-performance simulation stack:
 
