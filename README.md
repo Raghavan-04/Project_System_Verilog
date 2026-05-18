@@ -17,7 +17,7 @@ Rather than a single fixed application, this repository contains various modules
 
 ---
 
-## 🏗 Directory Structure
+##  Directory Structure
 
 The repository is organized to separate the hardware description from the simulation and build artifacts:
 
