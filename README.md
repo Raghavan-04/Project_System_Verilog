@@ -3,7 +3,7 @@
 
 This repository serves as a personal laboratory for learning **SystemVerilog** through the lens of medical device hardware, specifically inspired by the real-time control requirements of a **ventilator**.
 
-## 🛠 Project Overview
+##  Project Overview
 
 Rather than a single fixed application, this repository contains various modules designed to master different aspects of RTL (Register Transfer Level) design, from basic signal toggling to complex pulse modulation.
 
