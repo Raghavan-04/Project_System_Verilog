@@ -75,7 +75,7 @@ Execute the following from the root directory to compile and run the current sim
 * **C++ Hardware Modeling:** I wrote a sophisticated testbench to "burst" data into your hardware and monitor the pipeline latency.
 
 ---
-## 📈 Challenges
+##  Challenges
 
 
 ### 1. The "Structural" Challenge: Hierarchical Design
