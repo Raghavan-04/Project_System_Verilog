@@ -113,7 +113,7 @@ This is the hardest shift for software developers.
 
 ---
 
-### 🔍 My Current : The 200 Bug
+###  My Current : The 200 Bug
 
 Seeing "200" instead of "700" is actually most important challenge yet. It represents a **Timing Race Condition**.
 
