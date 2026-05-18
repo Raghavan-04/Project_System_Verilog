@@ -47,7 +47,7 @@ Execute the following from the root directory to compile and run the current sim
 
 ---
 
-## 📈 Key Learnings
+##  Key Learnings
 
 
 ### 1. Advanced RTL Architecture
