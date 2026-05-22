@@ -21,10 +21,10 @@ The architecture isolates the multiplication delay from the accumulation loop re
 
 ```text
        ┌─────────┐     ┌─────────┐
-A_in ──┤ FIFO_A  ├────►│         │     ┌──────────┐     ┌───────────┐
-       └─────────┘     │ Signed  ├────►│ Pipeline ├────►│  32-bit   ├──► Out
-                       │  Mult   │     │ Register │     │ Accumator │
-B_in ──┤ FIFO_B  ├────►│         │     └──────────┘     └─────▲─────┘
+A_in ──┤ FIFO_A  ├────►│         │     ┌──────────┐     ┌────────────┐
+       └─────────┘     │ Signed  ├────►│ Pipeline ├────►│  32-bit    ├──► Out
+       ┌─────────┐     │  Mult   │     │ Register │     │ Accumlator │
+B_in ──┤ FIFO_B  ├────►│         │     └──────────┘     └─────▲──────┘
        └─────────┘     └─────────┘                            │
                                 └───────── Stage 1 ───────────┴─── Stage 2 ──┘
 
